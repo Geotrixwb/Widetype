@@ -1,0 +1,57 @@
+﻿<Window x:Class="Widetype.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Widetype"
+        mc:Ignorable="d"
+        Title="Widetype" Height="510" Width="820" Background="#242526">
+
+    <Grid Height="657" Margin="-2,0,2,0" >
+        
+        <Button Name="WSfile" Margin="10,-3,0,0" 
+                Background="#242526"
+                Foreground="white"
+                Click="Save_Click"
+                Width="42"
+                Height="18"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                BorderThickness="0">
+            Save</Button>
+        
+        <Menu Margin="52,-3,712,642" Background="#242526">
+            <MenuItem Header="Settings" Background="#242526" Width="57"
+                      Height="18"
+                      Foreground="white">
+                <MenuItem Header="Font size" Foreground="black">
+                    <MenuItem Header="15" Foreground="black"
+                                    Click="MinFontSize"></MenuItem>
+                    <MenuItem Header="18" Foreground="black"
+                                    Click="MedFontSize"></MenuItem>
+                    <MenuItem Header="24" Foreground="black"
+                                    Click="MaxFontSize"></MenuItem>
+                </MenuItem>
+
+                <MenuItem Header="Font Style" Foreground="black">
+                    <MenuItem Header="Normal" Click="NormalText"></MenuItem>
+                    <MenuItem Header="Italic" Click="ItalicText"></MenuItem>
+
+                </MenuItem>
+            </MenuItem>
+        </Menu>
+        
+        
+        <TextBox x:Name="Input" Margin="0,36,0,-81"
+                 AcceptsReturn="True"
+                 TextWrapping="Wrap"
+                 Background="#161618"
+                 FontFamily="Arial"
+                 Foreground="White"
+
+                 FontSize="15"
+                 BorderThickness="0" Text=""/>
+
+
+    </Grid>
+</Window>
